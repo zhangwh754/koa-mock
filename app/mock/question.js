@@ -14,7 +14,7 @@ export default [
   },
   {
     url: '/question',
-    method: 'post',
+    method: 'get',
     response: ctx => ({
       list: getQuestionList(ctx),
       total: Random.integer(50, 100),
