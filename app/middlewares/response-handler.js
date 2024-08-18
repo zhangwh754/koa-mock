@@ -6,7 +6,7 @@ export function responseHandle(app) {
       const response = ctx.body
 
       ctx.body = {
-        code: ctx.status,
+        code: 1,
         msg: 'success',
         data: response,
       }

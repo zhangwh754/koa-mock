@@ -1,3 +1,3 @@
-import example from './question.js'
+import survey from './survey.js'
 
-export default [...example]
+export default [...survey]

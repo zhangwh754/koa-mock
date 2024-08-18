@@ -9,9 +9,10 @@ export function errorHandle() {
     } catch (err) {
       // 设置状态码
       ctx.status = err.status || 500
+
       // 设置响应体
       ctx.body = {
-        code: ctx.status,
+        code: err.code || 0,
         msg: err.message || '服务器错误',
         data: null,
       }
