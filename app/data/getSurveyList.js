@@ -7,6 +7,19 @@ export default function getQuestionList(ctx) {
 
   const result = []
 
+  if (keyword && keyword.length >= 4) {
+    return [
+      {
+        id: Random.id(),
+        title: keyword,
+        isPublish: isPublish == 'true' ? true : Random.boolean(),
+        isStar: isStar == 'true' ? true : Random.boolean(),
+        isDelete: isDelete == 'true' ? true : false,
+        createTime: Random.datetime('yyyy-MM-dd'),
+      },
+    ]
+  }
+
   for (let i = 0; i < pageSize; i++) {
     result.push({
       id: Random.id(),

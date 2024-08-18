@@ -6,27 +6,34 @@ const Random = Mock.Random
 
 export default [
   {
-    url: '/question/:id',
+    url: '/survey/:id',
     method: 'get',
-    response: () => {
+    response: ctx => {
+      const id = ctx.request.params.id
+
+      if (!id) ctx.throw('对应问卷不存在')
+
       return {
-        id: Random.id(),
+        id: id,
         title: Random.ctitle(),
       }
     },
   },
   {
-    url: '/question',
+    url: '/survey',
     method: 'get',
     response: ctx => {
+      const { keyword } = ctx.query
+      // ctx.throw(new CustomError('测试', -99))
+
       return {
         list: getSurveyList(ctx),
-        total: Random.integer(50, 100),
+        total: keyword && keyword.length >= 4 ? 1 : Random.integer(50, 100),
       }
     },
   },
   {
-    url: '/question',
+    url: '/survey',
     method: 'post',
     response: ctx => {
       const body = ctx.request.body
