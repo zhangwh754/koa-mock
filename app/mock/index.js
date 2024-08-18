@@ -1,3 +1,3 @@
-import example from "./question.js";
+import example from './question.js'
 
-export default [...example];
+export default [...example]
