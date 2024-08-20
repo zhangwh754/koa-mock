@@ -47,4 +47,23 @@ export default [
       }
     },
   },
+  {
+    url: '/survey/update/:id',
+    method: 'patch',
+    response: () => '',
+  },
+  {
+    url: '/survey/duplicate/:id',
+    method: 'post',
+    response: () => {
+      return {
+        id: Random.id(),
+      }
+    },
+  },
+  {
+    url: '/survey/delete/:id',
+    method: 'delete',
+    response: () => '',
+  },
 ]
