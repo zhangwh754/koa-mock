@@ -16,6 +16,36 @@ export default [
       return {
         id: id,
         title: Random.ctitle(),
+        componentsList: [
+          {
+            id: Random.id(),
+            title: '标题',
+            componentType: 'surveyTitle',
+            props: {
+              title: '你好',
+              level: 2,
+              isCenter: true,
+            },
+          },
+          {
+            id: Random.id(),
+            title: '输入框1',
+            componentType: 'surveyInput',
+            props: {
+              title: '姓名',
+              placeHolder: '请输入姓名',
+            },
+          },
+          {
+            id: Random.id(),
+            title: '输入框2',
+            componentType: 'surveyInput',
+            props: {
+              title: '地址',
+              placeHolder: '请输入地址',
+            },
+          },
+        ],
       }
     },
   },
