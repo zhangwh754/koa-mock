@@ -15,8 +15,8 @@ export default [
     method: 'get',
     response: ctx => {
       return {
-        username: Random.title(),
-        nickname: Random.cname(),
+        username: '用户001',
+        nickname: '测试用户',
       }
     },
   },
