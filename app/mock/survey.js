@@ -19,8 +19,22 @@ export default [
         componentsList: [
           {
             id: Random.id(),
-            title: '标题',
+            title: '标题1',
+            componentType: 'surveyInfo',
+            isLock: false,
+            isHide: false,
+            props: {
+              title: '你好',
+              isCenter: true,
+              desc: '问卷描述',
+            },
+          },
+          {
+            id: Random.id(),
+            title: '标题2',
             componentType: 'surveyTitle',
+            isLock: false,
+            isHide: true,
             props: {
               title: '你好',
               level: 2,
@@ -31,18 +45,44 @@ export default [
             id: Random.id(),
             title: '输入框1',
             componentType: 'surveyInput',
+            isLock: false,
+            isHide: false,
             props: {
               title: '姓名',
-              placeHolder: '请输入姓名',
+              placeholder: '请输入姓名',
             },
           },
           {
             id: Random.id(),
-            title: '输入框2',
-            componentType: 'surveyInput',
+            title: '单选框1',
+            componentType: 'surveyRadio',
+            isLock: false,
+            isHide: false,
             props: {
-              title: '地址',
-              placeHolder: '请输入地址',
+              title: '单选框1',
+              options: [
+                { label: '苹果', value: '苹果' },
+                { label: '香蕉', value: '香蕉' },
+                { label: '桃子', value: '桃子' },
+              ],
+              isVertical: true,
+              defaultValue: '桃子',
+            },
+          },
+          {
+            id: Random.id(),
+            title: '复选框1',
+            componentType: 'surveyCheckbox',
+            isLock: false,
+            isHide: false,
+            props: {
+              title: '复选框1',
+              options: [
+                { label: '复选框1', value: '复选框1', checked: true },
+                { label: '复选框2', value: '复选框2', checked: true },
+                { label: '复选框3', value: '复选框3', checked: true },
+              ],
+              isVertical: false,
             },
           },
         ],
