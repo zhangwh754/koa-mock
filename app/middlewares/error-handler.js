@@ -13,7 +13,7 @@ export function errorHandle() {
       // 设置响应体
       ctx.body = {
         code: err.code || 0,
-        msg: err.message || '服务器错误',
+        message: err.message || '服务器错误',
         data: null,
       }
     }

@@ -7,7 +7,7 @@ export function responseHandle(app) {
 
       ctx.body = {
         code: 1,
-        msg: 'success',
+        message: 'success',
         data: response,
       }
     }
